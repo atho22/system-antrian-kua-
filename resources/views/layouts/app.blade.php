@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KUA Banjarmasin Utara - Sistem Antrian</title>
     
-    <!-- Bootstrap CSS -->
+    {{-- PERBAIKAN: Menambahkan link untuk ikon (favicon) --}}
+    <link rel="icon" href="{{ asset('logo-kemenag.png') }}" type="image/x-icon">
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
@@ -78,11 +78,10 @@
     </style>
 </head>
 <body>
-    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-kemenag">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="/">
-                <img src="https://kua.kemenag.go.id/assets/images/logo-kemenag.png" alt="Logo Kemenag" height="40" class="me-2">
+                <img src="{{ asset('images/logo-kemenag.png') }}" alt="Logo Kemenag" height="40" class="me-2">
                 <div>
                     <div class="fs-5">KUA Banjarmasin Utara</div>
                     <div class="small opacity-75">Kementerian Agama Republik Indonesia</div>
@@ -118,7 +117,6 @@
         </div>
     </nav>
 
-    <!-- Main Content -->
     <main class="py-4">
         @if(session('success'))
         <div class="container mb-4">
@@ -141,7 +139,6 @@
         @yield('content')
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="row">
@@ -158,7 +155,6 @@
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html> 
+</html>
