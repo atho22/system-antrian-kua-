@@ -29,13 +29,7 @@
         <div class="w-48 h-1.5 bg-gradient-to-r from-teal-500 to-emerald-600 rounded-full mt-6"></div>
     </div>
 
-    <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-8 mb-10">
-        <div class="flex items-center justify-between mb-6">
-            <h2 class="text-2xl font-bold text-gray-900">Filter Laporan</h2>
-            <div class="text-base text-gray-600 font-medium">
-                Periode: <span class="font-semibold text-teal-600">{{ ucfirst($period) }}</span> - <span class="font-semibold text-teal-600">{{ $date }}</span>
-            </div>
-        </div>
+    zz
         
         <form method="GET" class="grid grid-cols-1 md:grid-cols-4 gap-6">
             <div>

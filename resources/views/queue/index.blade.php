@@ -120,7 +120,7 @@
             location.reload();
         }
         // Refresh setiap 30 detik
-        setInterval(refreshPage, 30000);
+        setInterval(refreshPage, 15000);
     </script>
 </div>
 @endsection 
