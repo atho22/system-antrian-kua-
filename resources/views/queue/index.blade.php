@@ -1,7 +1,6 @@
-@extends('layouts.app')
+@extends('layouts.queue_display')
 @section('content')
 <div class="container-fluid py-4">
-    <!-- Header Section -->
     <div class="row mb-4">
         <div class="col-12">
             <div class="d-flex align-items-center justify-content-between">
@@ -28,7 +27,6 @@
         </div>
     </div>
 
-    <!-- Service Queue Boxes -->
     <div class="row g-4">
         @foreach($services as $service)
             @php
@@ -61,7 +59,6 @@
                         </div>
                     </div>
                     <div class="card-body p-4">
-                        <!-- Current Queue -->
                         <div class="text-center mb-4">
                             <h6 class="text-muted mb-3">SEDANG DILAYANI</h6>
                             <div class="display-1 fw-bold text-primary mb-2">
@@ -79,7 +76,6 @@
                             @endif
                         </div>
 
-                        <!-- Next Queue -->
                         <div class="text-center">
                             <h6 class="text-muted mb-3">ANTRIAN SELANJUTNYA</h6>
                             <div class="h2 fw-bold text-success mb-2">
@@ -114,7 +110,6 @@
         @endforeach
     </div>
 
-    <!-- Auto Refresh -->
     <script>
         function refreshPage() {
             location.reload();
@@ -123,4 +118,4 @@
         setInterval(refreshPage, 15000);
     </script>
 </div>
-@endsection 
+@endsection

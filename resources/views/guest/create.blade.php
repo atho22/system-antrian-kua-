@@ -30,8 +30,8 @@
                             Nama Lengkap
                         </label>
                         <input type="text" name="name" 
-                               class="form-control form-control-lg" 
-                               placeholder="Masukkan nama lengkap Anda" required>
+                            class="form-control form-control-lg" 
+                            placeholder="Masukkan nama lengkap Anda" required>
                     </div>
 
                     <!-- Nomor Telepon -->
