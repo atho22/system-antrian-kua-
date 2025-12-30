@@ -17,7 +17,7 @@ Pastikan Anda memiliki akun Railway di [railway.app](https://railway.app)
 2. Klik "New Project"
 3. Pilih "Deploy from GitHub repo"
 4. Pilih repository `system-antrian-kua-`
-5. Railway akan otomatis mendeteksi konfigurasi dari file `nixpacks.toml` dan `railway.json`
+5. Railway akan otomatis mendeteksi `Dockerfile` dan menggunakan Docker untuk build
 
 ### 3. Set Environment Variables
 
@@ -55,9 +55,9 @@ Railway akan otomatis build dan deploy aplikasi Anda. Proses ini meliputi:
 
 ## File Konfigurasi
 
-- `Procfile`: Mendefinisikan command untuk menjalankan web server
-- `nixpacks.toml`: Konfigurasi build untuk Nixpacks
+- `Dockerfile`: Docker configuration untuk build dengan PHP 8.3
 - `railway.json`: Konfigurasi spesifik Railway
+- `deploy.sh`: Script deployment untuk setup awal
 - `deploy.sh`: Script deployment untuk setup awal
 - `.env.example`: Template environment variables
 
