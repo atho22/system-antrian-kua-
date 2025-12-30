@@ -1,0 +1,14 @@
+# Railway Nixpacks Configuration
+# This file configures the build and deployment environment for Railway
+
+[phases.setup]
+nixPkgs = ['php83', 'php83Extensions.gd', 'php83Extensions.mbstring', 'php83Extensions.xml', 'php83Extensions.zip', 'php83Extensions.dom', 'php83Extensions.simplexml', 'php83Extensions.xmlreader', 'php83Extensions.xmlwriter', 'php83Extensions.zlib', 'php83Extensions.ctype', 'php83Extensions.fileinfo', 'php83Extensions.iconv']
+
+[phases.install]
+cmds = ['composer install --no-dev --optimize-autoloader']
+
+[phases.build]
+cmds = ['php artisan config:cache', 'php artisan route:cache', 'php artisan view:cache']
+
+[start]
+cmd = 'php artisan serve --host=0.0.0.0 --port=${PORT:-8000}'
