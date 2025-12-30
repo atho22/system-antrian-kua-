@@ -39,7 +39,7 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 WORKDIR /var/www/html
 
 # Copy composer files
-COPY composer.json composer.lock ./
+COPY composer.json composer.lock* ./
 
 # Install dependencies
 RUN composer install --no-dev --optimize-autoloader --no-scripts
@@ -52,13 +52,16 @@ RUN chown -R www-data:www-data /var/www/html \
     && chmod -R 755 /var/www/html/storage \
     && chmod -R 755 /var/www/html/bootstrap/cache
 
-# Generate optimized config
-RUN php artisan config:cache \
-    && php artisan route:cache \
-    && php artisan view:cache
+# Create startup script
+RUN echo '#!/bin/sh' > /usr/local/bin/start.sh \
+    && echo 'php artisan config:cache || true' >> /usr/local/bin/start.sh \
+    && echo 'php artisan route:cache || true' >> /usr/local/bin/start.sh \
+    && echo 'php artisan view:cache || true' >> /usr/local/bin/start.sh \
+    && echo 'php artisan serve --host=0.0.0.0 --port=8000' >> /usr/local/bin/start.sh \
+    && chmod +x /usr/local/bin/start.sh
 
 # Expose port
 EXPOSE 8000
 
-# Start PHP server
-CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]
+# Start PHP server with runtime initialization
+CMD ["/usr/local/bin/start.sh"]
