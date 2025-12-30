@@ -17,7 +17,7 @@ Aplikasi sistem antrian untuk Kantor Urusan Agama (KUA) yang dibangun dengan Lar
 - **Framework**: Laravel 12
 - **Frontend**: Vite + TailwindCSS 4
 - **Database**: SQLite (default) / MySQL / PostgreSQL
-- **PHP**: ^8.2
+- **PHP**: ^8.3
 
 ## 🚀 Deploy ke Railway
 
