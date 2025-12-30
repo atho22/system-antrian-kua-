@@ -85,6 +85,34 @@ Jika migration gagal:
 - Pastikan database file bisa dibuat dan diakses
 - Script `deploy.sh` akan otomatis membuat database.sqlite jika belum ada
 
+## Fitur yang Didukung
+
+✅ SQLite Database (default)
+✅ File-based Sessions
+✅ Queue System (database driver)
+✅ Excel Export/Import (maatwebsite/excel)
+✅ Vite untuk Asset Pipeline
+✅ Auto-migrations pada deployment
+✅ Laravel Cache dan Route Optimization
+
+## Tips Optimasi
+
+1. **Storage**: Railway menyediakan persistent storage. Data SQLite akan tersimpan antar deployment.
+2. **Logs**: Gunakan `php artisan pail` atau Railway logs untuk monitoring.
+3. **Queue Workers**: Untuk production, pertimbangkan menambahkan worker process terpisah di Railway.
+4. **Cache**: Aplikasi sudah dikonfigurasi untuk caching database untuk performa optimal.
+
+## Langkah Selanjutnya
+
+Setelah deployment berhasil:
+
+1. ✅ Akses aplikasi melalui URL Railway
+2. ✅ Test fitur login/register
+3. ✅ Test sistem antrian
+4. ✅ Test export Excel
+5. ✅ Setup custom domain (opsional)
+6. ✅ Setup monitoring dan alerts di Railway
+
 ## Support
 
 Untuk pertanyaan atau masalah, buat issue di repository GitHub.
