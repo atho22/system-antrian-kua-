@@ -6,6 +6,11 @@
 
 Pastikan Anda memiliki akun Railway di [railway.app](https://railway.app)
 
+**Persyaratan:**
+- PHP 8.3 (otomatis dikonfigurasi oleh Railway)
+- Composer
+- Node.js & NPM
+
 ### 2. Deploy dari GitHub
 
 1. Login ke Railway Dashboard

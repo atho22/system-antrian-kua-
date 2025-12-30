@@ -1,3 +1,6 @@
+[variables]
+NIXPACKS_PHP_VERSION = "8.3"
+
 [phases.setup]
 nixPkgs = ["php83", "php83Extensions.mbstring", "php83Extensions.pdo", "php83Extensions.pdo_sqlite", "php83Extensions.sqlite3", "php83Extensions.zip", "php83Extensions.gd", "php83Extensions.xml", "php83Extensions.simplexml", "php83Extensions.xmlreader", "php83Extensions.xmlwriter", "php83Extensions.dom", "php83Extensions.fileinfo", "nodejs"]
 nixLibs = ["libpng", "libjpeg", "freetype", "zlib"]
