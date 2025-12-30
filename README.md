@@ -1,11 +1,98 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Sistem Antrian KUA
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Aplikasi sistem antrian untuk Kantor Urusan Agama (KUA) yang dibangun dengan Laravel 12.
+
+## Fitur
+
+- ✅ Manajemen Antrian
+- ✅ Registrasi Tamu
+- ✅ Layanan Multi-Service
+- ✅ Export Data ke Excel
+- ✅ Activity Logs
+- ✅ Dashboard Admin
+- ✅ Sistem Queue untuk Background Jobs
+
+## Teknologi
+
+- **Framework**: Laravel 12
+- **Frontend**: Vite + TailwindCSS 4
+- **Database**: SQLite (default) / MySQL / PostgreSQL
+- **PHP**: ^8.2
+
+## 🚀 Deploy ke Railway
+
+Aplikasi ini sudah dikonfigurasi untuk deployment ke Railway. 
+
+**Quick Deploy:**
+
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https://github.com/atho22/system-antrian-kua-)
+
+Atau ikuti panduan lengkap di [RAILWAY_DEPLOY.md](RAILWAY_DEPLOY.md)
+
+### Environment Variables
+
+Lihat [RAILWAY_ENV_VARS.md](RAILWAY_ENV_VARS.md) untuk daftar lengkap environment variables yang diperlukan.
+
+## Instalasi Lokal
+
+1. Clone repository
+```bash
+git clone https://github.com/atho22/system-antrian-kua-.git
+cd system-antrian-kua-
+```
+
+2. Install dependencies
+```bash
+composer install
+npm install
+```
+
+3. Setup environment
+```bash
+cp .env.example .env
+php artisan key:generate
+```
+
+4. Setup database
+```bash
+touch database/database.sqlite
+php artisan migrate
+```
+
+5. Build assets
+```bash
+npm run build
+```
+
+6. Run development server
+```bash
+php artisan serve
+```
+
+## Development
+
+Run dengan hot-reload:
+```bash
+composer dev
+```
+
+Ini akan menjalankan:
+- PHP development server
+- Queue worker
+- Laravel Pail (log viewer)
+- Vite dev server
+
+## Testing
+
+```bash
+composer test
+```
+
+## Linting
+
+```bash
+./vendor/bin/pint
+```
 
 ## About Laravel
 
